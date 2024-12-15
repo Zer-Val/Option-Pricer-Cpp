@@ -5,7 +5,7 @@
 class AsianOption : public Option 
 {
     public:
-        // Constructor that initialize _timeSteps
+        //Constructor of AsianOption, that use the constructor of Option and initialize _timeSteps as a vector (t_1, t_2, ... t_n)
         AsianOption(const std::vector<double>& timeSteps);
 
         // Getter method for _timeSteps
