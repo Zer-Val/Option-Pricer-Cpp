@@ -11,6 +11,5 @@ class AmericanPutOption : public AmericanOption
 		double payoff(double z) const override;
 
 		//GetOptionType method for a Call option
-		optionType GetOptionType() const override;
-		
+		optionType GetOptionType() const override;		
 };
