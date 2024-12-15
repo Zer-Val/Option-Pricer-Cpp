@@ -1,9 +1,10 @@
 #pragma once
 #include "AmericanOption.h"
+
 class AmericanPutOption : public AmericanOption
 {
 	public:
-		//Constructor for AmericanCallOption, uses the one from AmericanOption
+		//Constructor of AmericanPutOption, that use the constructor of AmericanOption
 		AmericanPutOption(double expiry, double strike);
 
 		//Payoff method for an Ameican Put option
@@ -13,4 +14,3 @@ class AmericanPutOption : public AmericanOption
 		optionType GetOptionType() const override;
 		
 };
-
