@@ -4,7 +4,7 @@
 class AmericanCallOption : public AmericanOption
 {
 	public:
-		//Constructor for AmericanCallOption
+		//Constructor of AmericanCallOption, that use the constructor of AmericanOption
 		AmericanCallOption(double expiry, double strike);
 
 		//Payoff method for an American Call option
@@ -13,4 +13,3 @@ class AmericanCallOption : public AmericanOption
 		//GetOptionType method for a(n) (American) Call option
 		optionType GetOptionType() const override;
 };
-
