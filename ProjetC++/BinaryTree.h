@@ -9,9 +9,13 @@ class BinaryTree
         	BinaryTree() : _depth(0) {}
 
         	void setDepth(int depth);
+
         	void setNode(int level, int index, T value);
+
         	T getNode(int level, int index) const;
+
         	void display() const;
+
     	private:
         	int _depth;
         	std::vector<std::vector<T>> _tree;
