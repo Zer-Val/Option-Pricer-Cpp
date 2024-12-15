@@ -4,7 +4,7 @@
 class AsianCallOption : public AsianOption 
 {
 	public:
-		// Constructor that initializes _strike
+		//Constructor of AsianCallOption, that use the constructor of AsianOption
 		AsianCallOption(const std::vector<double>& timeSteps, double strike);
 
 		// Implementation of the payoff method for the Call option
