@@ -3,7 +3,7 @@
 
 class AmericanOption : public Option
 {
-	public :
+	public:
 		//Enum for the option type
 		enum class optionType { call, put };
 
