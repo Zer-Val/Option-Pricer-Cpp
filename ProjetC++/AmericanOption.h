@@ -3,11 +3,11 @@
 
 class AmericanOption : public Option
 {
-	public :
+	public:
 		//Enum for the option type
 		enum class optionType { call, put };
 
-		// Constructor that initialize _strike
+		//Constructor of AmericanOption, that use the constructor of Option and initialize _strike as a double (K)
 		AmericanOption(double expiry, double strike); 
 	
 		// Getter method for _strike

@@ -4,7 +4,7 @@
 class EuropeanDigitalPutOption : public EuropeanDigitalOption 
 {
 	public:
-		// Constructor for the EuropeanDigitalPutOption class
+		//Constructor of EuropeanDigitalPutOption, that use the constructor of EuropeanDigitalOption
 		EuropeanDigitalPutOption(double expiry, double strike);
     
 		// Payoff method for a digital Put option
