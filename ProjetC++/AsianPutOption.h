@@ -10,6 +10,9 @@ public:
     // Implementation of the payoff method for the Put option
     double payoff(double underlyingPrice) const override;
 
+    //GetOptionType method for an Asian Put option
+    optionType GetOptionType() const override;
+
 private:
     double _strike; //Private member to store the strike price of the option
 };
