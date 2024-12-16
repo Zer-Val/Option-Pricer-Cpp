@@ -1,6 +1,6 @@
 #include "PutOption.h"
 
-// Implementation of the constructor for PutOption, uses the one from EuropeanVanillaOption
+//Implementation of the constructor of (EuropeanVanilla)PutOption, that use the constructor of EuropeanVanillaOption
 PutOption::PutOption(double expiry, double strike) : EuropeanVanillaOption(expiry, strike) {}
 
 //Implementation of the Payoff method for an European Vanilla Put option
