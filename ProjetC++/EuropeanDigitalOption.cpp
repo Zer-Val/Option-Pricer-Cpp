@@ -1,7 +1,7 @@
 #include "EuropeanDigitalOption.h"
 
 //Implementation of the constructor of EuropeanDigitalOption, that use the constructor of Option and initialize _strike as a double (K)
-EuropeanDigitalOption::EuropeanDigitalOption(double K, double expiry) : Option(expiry), strike(K) {}
+EuropeanDigitalOption::EuropeanDigitalOption(double K, double expiry) : Option(expiry), _strike(K) {}
 
 // Getter method for _strikedouble EuropeanDigitalOption::getStrike() const
 double EuropeanDigitalOption::getStrike() const 
