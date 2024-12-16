@@ -6,7 +6,6 @@
 class BlackScholesPricer 
 {
 	public:
-
 		//Constructor of BlackScholesPricer - for EuropeanVanillaOptions
 		BlackScholesPricer(EuropeanVanillaOption* option, double asset_price, double interest_rate, double volatility);
 		
