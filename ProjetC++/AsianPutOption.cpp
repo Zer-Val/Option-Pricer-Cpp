@@ -1,11 +1,17 @@
 #include "AsianPutOption.h"
 #include <algorithm> 
 
-// Constructeur qui initialise _timeSteps et _strikePrice
+//Implementation of the constructor of AsianPutOption, that use the constructor of AsianOption and initialize _strike as a double (K)
 AsianPutOption::AsianPutOption(const std::vector<double>& timeSteps, double strike) : AsianOption(timeSteps), _strike(strike) {}
 
 // Implémentation de la méthode payoff pour l'option Put
-double AsianPutOption::payoff(double underlyingPrice) const 
+double AsianPutOption::payoff(double underlyingPrice) const
 {
     return std::max(_strike - underlyingPrice, 0.0);
+}
+
+//Implementation of the GetOptionType method for an Asian Put option
+AsianOption::optionType AsianPutOption::GetOptionType() const
+{
+	return optionType::put;
 }

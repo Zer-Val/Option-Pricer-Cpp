@@ -9,7 +9,6 @@ double AmericanOption::getStrike() const
 	return _strike;
 }
 
-
 // Override of the isAmericanOption method to return true for American Options
 bool AmericanOption::isAmericanOption() const
 {

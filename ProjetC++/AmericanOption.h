@@ -3,26 +3,25 @@
 
 class AmericanOption : public Option
 {
-	public:
-		//Enum for the option type
-		enum class optionType { call, put };
+public:
+	//Enum for the option type
+	enum class optionType { call, put };
 
-		//Constructor of AmericanOption, that use the constructor of Option and initialize _strike as a double (K)
-		AmericanOption(double expiry, double strike); 
-	
-		// Getter method for _strike
-		double getStrike() const;
+	//Constructor of AmericanOption, that use the constructor of Option and initialize _strike as a double (K)
+	AmericanOption(double expiry, double strike);
 
-		// Pure virtual method to get the option type
-		virtual optionType GetOptionType() const = 0;
+	// Getter method for _strike
+	double getStrike() const;
 
-		// Override of the isAmericanOption method to return true for American Options
-		bool isAmericanOption() const override;
+	// Pure virtual method to get the option type
+	virtual optionType GetOptionType() const = 0;
 
-		// override of the isAsianOption method to return false for American Options
-		bool isAsianOption() const override;
+	// Override of the isAmericanOption method to return true for American Options
+	bool isAmericanOption() const override;
 
-	private:
-		double _strike; //Private member variable for the strike price
+	// override of the isAsianOption method to return false for American Options
+	bool isAsianOption() const override;
+
+private:
+	double _strike; //Private member variable for the strike price
 };
-

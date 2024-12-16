@@ -1,6 +1,6 @@
 #include "AmericanCallOption.h"
 
-// Implementation of the constructor for AmericanCallOption, uses the one from AmericanOption
+//Implementation of the constructor of AmericanCallOption, that use the constructor of AmericanOption
 AmericanCallOption::AmericanCallOption(double expiry, double strike) : AmericanOption(expiry, strike) {}
 
 //Payoff method for an American Call option
