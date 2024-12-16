@@ -1,7 +1,7 @@
 #include "AsianCallOption.h"
 #include <algorithm>
 
-// Constructor that initializes _strike
+//Implementation of the constructor of AsianCallOption, that use the constructor of AsianOption and initialize _strike as a double (K)
 AsianCallOption::AsianCallOption(const std::vector<double>& timeSteps, double strikePrice) : AsianOption(timeSteps), _strike(strikePrice) {}
 
 // Implementation of the payoff method for the Call option
