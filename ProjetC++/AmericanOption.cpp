@@ -1,6 +1,6 @@
 #include "AmericanOption.h"
 
-// Constructor that initialize _strike
+//Implementation of the constructor of AmericanCallOption, that use the constructor of AmericanOption
 AmericanOption::AmericanOption(double expiry, double strike) : Option(expiry), _strike(strike) {}
 
 // Getter method for _strike
@@ -8,7 +8,6 @@ double AmericanOption::getStrike() const
 {
 	return _strike;
 }
-
 
 // Override of the isAmericanOption method to return true for American Options
 bool AmericanOption::isAmericanOption() const
