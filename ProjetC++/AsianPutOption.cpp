@@ -9,3 +9,9 @@ double AsianPutOption::payoff(double underlyingPrice) const
 {
     return std::max(_strike - underlyingPrice, 0.0);
 }
+
+//Implementation of the GetOptionType method for an Asian Put option
+AsianOption::optionType AsianPutOption::GetOptionType() const
+{
+	return optionType::put;
+}
