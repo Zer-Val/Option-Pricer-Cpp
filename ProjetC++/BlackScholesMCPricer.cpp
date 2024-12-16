@@ -3,9 +3,8 @@
 #include <cmath> // Pour std::sqrt
 #include <stdexcept> // Pour std::runtime_error
 
-BlackScholesMCPricer::BlackScholesMCPricer(Option* option, double initial_price, double interest_rate, double volatility)
-    : _option(option), _underlying_price(initial_price), _risk_free_rate(interest_rate), _volatility(volatility),
-    _nb_paths_generated(0), _current_estimate(0.0), estimates_mean(0.0), estimates_variance(0.0) {}
+//Implementation of the constructor of BlackScholesMCPricer
+BlackScholesMCPricer::BlackScholesMCPricer(Option* option, double initial_price, double interest_rate, double volatility) : _option(option), _underlying_price(initial_price), _risk_free_rate(interest_rate), _volatility(volatility), _nb_paths_generated(0), _current_estimate(0.0), estimates_mean(0.0), estimates_variance(0.0) {}
 
 // Méthode pour obtenir le nombre de chemins générés
 int BlackScholesMCPricer::getNbPaths() const
