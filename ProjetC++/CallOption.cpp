@@ -1,6 +1,6 @@
 #include "CallOption.h"
 
-//Implementation of the constructor of (EuropeanVanilla)CallOption, that use the constructor of EuropeanVanillaOption
+//Implementation of the constructor of CallOption, that uses the constructor of EuropeanVanillaOption
 CallOption::CallOption(double expiry, double strike) : EuropeanVanillaOption(expiry, strike) {}
 
 //Implementation of the payoff method for an European Vanilla Call option
