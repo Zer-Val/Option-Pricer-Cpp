@@ -85,7 +85,6 @@ void CRRPricer::compute()
 			_price_tree.setNode(n, i, price); // We add the price to the tree
         }
     }
-    
 
     if (_option->isAmericanOption()) // for the american options
     {
@@ -136,7 +135,7 @@ void CRRPricer::compute()
             }
         }
     }
-    
+
 	_computed = true; // We change the flag to true, to indicate that the computation is done
 }
 // Get the value of a specific node in the value tree
@@ -149,16 +148,19 @@ double CRRPricer::get(int n, int i) const
 // Compute binomial coefficient (n choose k)
 double CRRPricer::binomialCoefficient(int n, int k) const
 {
-    if (k > n) //Property of bin. coefficients
-    { 
-        return 0;
+    if (k > n - k)
+    {
+        k = n - k;
     }
-    if (k == 0 || k == n) //Property of bin. coefficients
+
+    if (k == 0 || k == n)
     {
         return 1;
     }
-    int result = 1;
-	for (int i = 1; i <= k; ++i)  //Formula to calculate binomial coefficients
+
+    double result = 1;
+
+    for (int i = 1; i <= k; ++i)
     {
         result *= (n - (k - i));
         result /= i;
@@ -176,6 +178,7 @@ double CRRPricer::closed_form_formula() const // Cf. formula in the subject, p7
         double probability = binomialCoeff * std::pow(_q, i) * std::pow(1 - _q, _depth - i); // Probability of ending at node i
         result += probability * _option->payoff(_price_tree.getNode(_depth, i)); // Weighted payoff
     }
+    
     return result / std::pow(1 + _interest_rate, _depth); // Discount to present value
 }
 
