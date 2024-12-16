@@ -4,7 +4,7 @@
 class CallOption : public EuropeanVanillaOption
 {
 	public:
-		//Constructor of CallOption
+		//Constructor of (EuropeanVanilla)CallOption, that use the constructor of EuropeanVanillaOption
         	CallOption(double expiry, double strike);
 
         	//Override of the payoff method for an European Vanilla Call option
