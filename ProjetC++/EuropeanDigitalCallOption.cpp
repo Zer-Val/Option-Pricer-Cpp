@@ -1,6 +1,6 @@
 #include "EuropeanDigitalCallOption.h"
 
-//Implementation of the constructor for the EuropeanDigitalCallOption class
+//Implementation of the constructor of EuropeanDigitalCallOption, that use the constructor of EuropeanDigitalOption
 EuropeanDigitalCallOption::EuropeanDigitalCallOption(double expiry, double strike) : EuropeanDigitalOption(expiry, strike) {}
 
 // Implementation of the payoff method for a digital Call option
@@ -14,4 +14,3 @@ EuropeanDigitalOption::optionType EuropeanDigitalCallOption::GetOptionType() con
 {
 	return optionType::call;
 }
-
