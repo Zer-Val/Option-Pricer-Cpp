@@ -148,6 +148,7 @@ double CRRPricer::get(int n, int i) const
 // Compute binomial coefficient (n choose k)
 double CRRPricer::binomialCoefficient(int n, int k) const
 {
+    double result;
     if (k > n - k)
     {
         k = n - k;
@@ -155,10 +156,8 @@ double CRRPricer::binomialCoefficient(int n, int k) const
 
     if (k == 0 || k == n)
     {
-        return 1;
+        result = 1;
     }
-
-    double result = 1;
 
     for (int i = 1; i <= k; ++i)
     {
