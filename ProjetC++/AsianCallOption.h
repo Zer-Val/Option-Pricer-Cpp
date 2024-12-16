@@ -10,6 +10,9 @@ public:
 	// Implementation of the payoff method for the Call option
 	double payoff(double underlyingPrice) const override;
 
+	//GetOptionType method for an Asian Call option
+	optionType GetOptionType() const override;
+
 private:
 	double _strike; //Private member to store the strike price of the option
 };
