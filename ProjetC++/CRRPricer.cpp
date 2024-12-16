@@ -2,7 +2,7 @@
 #include <stdexcept> // For invalid_argument exception handling
 #include <iostream>
 
-// Constructor to initialize the CRR model parameters and set up the price and value trees
+//Implementation of the constructor of CRRPricer that takes up (U), down (D) and interest rate (R)
 CRRPricer::CRRPricer(Option* option, int depth, double asset_price, double up, double down, double interest_rate) : _option(option), _depth(depth), _asset_price(asset_price), _up(up), _down(down), _interest_rate(interest_rate), _computed(false) 
 {
 	if (_option -> isAsianOption()) 
@@ -17,7 +17,7 @@ CRRPricer::CRRPricer(Option* option, int depth, double asset_price, double up, d
     	_price_tree.setNode(0, 0, _asset_price); // Set initial asset price
 }
 
-// Constructor that initializes U, D et R
+//Implementation of the constructor of CRRPricer that initialize up (U), down (D) and interest rate (R)
 CRRPricer::CRRPricer(Option* option, int depth, double asset_price, double r, double volatility) : _option(option), _depth(depth), _asset_price(asset_price), _computed(false) 
 {
 	if (_option -> isAsianOption()) 
