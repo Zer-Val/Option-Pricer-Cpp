@@ -24,6 +24,6 @@ class EuropeanVanillaOption : public Option
 		friend class BlackScholesPricer;
 
 	private:
+
 		double _strike; // Private member variable for the strike price as a double (K)
 };
-
