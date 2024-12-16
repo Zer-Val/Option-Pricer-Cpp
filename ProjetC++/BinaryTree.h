@@ -6,6 +6,7 @@ template <typename T>
 class BinaryTree 
 {
 	public:
+		//Constructor of BinaryTree, that initialize _depth as a int (N)
         	BinaryTree() : _depth(0) {}
 
         	void setDepth(int depth);
