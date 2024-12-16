@@ -9,7 +9,7 @@
 class BlackScholesMCPricer 
 {
 	public:
-		// Constructor of the BlackScholesMCPricer class
+		//Constructor of BlackScholesMCPricer
         	BlackScholesMCPricer(Option* option, double initial_price, double interest_rate, double volatility);
 
 		// Method to get the number of paths generated sicne the beginning of the program
