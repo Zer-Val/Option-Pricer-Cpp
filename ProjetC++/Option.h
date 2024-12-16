@@ -4,8 +4,7 @@
 class Option 
 {
 	public:
-        
-        	// Constructor of Option, that initialize _expiry, in years
+		//Constructor of Option, that initialize _expiry (in years) as a double (T)
         	Option(double expiry);
 
 	    	// Getter method for _expiry
@@ -24,6 +23,6 @@ class Option
         	virtual bool isAmericanOption() const;
 
     	private:
+
 	    	double _expiry; //Private attribute that stores the expiry date of the option in years (T)
 };
-
