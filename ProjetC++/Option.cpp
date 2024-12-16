@@ -1,7 +1,7 @@
 #include "Option.h"
 #include <iostream>
 
-// Constructor of Option, that initialize _expiry, in years
+//Implementation of the constructor of Option, that initialize _expiry (in years) as a double (T)
 Option::Option(double expiry) : _expiry(expiry) {}
 
 // Getter method for _expiry
