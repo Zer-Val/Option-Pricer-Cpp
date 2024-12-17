@@ -144,27 +144,23 @@ double CRRPricer::get(int n, int i) const
     return _value_tree.getNode(n, i);
 }
 
-
 // Compute binomial coefficient (n choose k)
 double CRRPricer::binomialCoefficient(int n, int k) const
 {
+    double result = 1;
     if (k > n - k)
     {
         k = n - k;
     }
 
-    if (k == 0 || k == n)
+    if (!(k == 0 || k == n))
     {
-        return 1;
-    }
-
-    double result = 1;
-
-    for (int i = 1; i <= k; ++i)
-    {
-        result *= (n - (k - i));
-        result /= i;
-    }
+        for (int i = 1; i <= k; ++i)
+        {
+            result *= (n - (k - i));
+            result /= i;
+        }
+    }    
     return result;
 }
 
