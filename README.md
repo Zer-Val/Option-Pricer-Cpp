@@ -308,7 +308,7 @@ D = e^{\left( r + \frac{\sigma^2}{2} \right)h - \sigma \sqrt{h}} - 1
 $$
 
 $$
-R = e^{rH} - 1
+R = e^{rh} - 1
 $$
   
 where $\sigma$ is the volatility and $r$ is the continuously compounded interest rate in the Black-Scholes model.
