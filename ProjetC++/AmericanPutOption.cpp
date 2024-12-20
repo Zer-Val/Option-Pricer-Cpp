@@ -9,7 +9,7 @@ double AmericanPutOption::payoff(double z) const
 	return (getStrike() >= z) ? (getStrike() - z) : 0.0;
 }
 
-//Implementation of the GetOptionType method for a Call option
+//GetOptionType method for an American Put option
 AmericanPutOption::optionType AmericanPutOption::GetOptionType() const
 {
 	return optionType::put;
