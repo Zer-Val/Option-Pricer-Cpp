@@ -4,7 +4,7 @@
 //Implementation of the constructor of AsianPutOption, that use the constructor of AsianOption and initialize _strike as a double (K)
 AsianPutOption::AsianPutOption(const std::vector<double>& timeSteps, double strike) : AsianOption(timeSteps), _strike(strike) {}
 
-// Implémentation de la méthode payoff pour l'option Put
+// Implementation of the payoff method for the Asian Put Option
 double AsianPutOption::payoff(double underlyingPrice) const
 {
     return std::max(_strike - underlyingPrice, 0.0);
