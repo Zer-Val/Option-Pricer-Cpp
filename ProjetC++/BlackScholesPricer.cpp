@@ -51,7 +51,7 @@ double BlackScholesPricer::operator()() const // Operator () to price the option
 	return price;
 }
 
-// Méthode pour retourner le Delta de l'option
+// Méthod to return the option Delat
 double BlackScholesPricer::delta() const 
 {
     double T, K, S = _asset_price, sigma = _volatility, r = _interest_rate, d1, delta;
