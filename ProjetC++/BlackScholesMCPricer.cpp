@@ -6,13 +6,13 @@
 //Implementation of the constructor of BlackScholesMCPricer
 BlackScholesMCPricer::BlackScholesMCPricer(Option* option, double initial_price, double interest_rate, double volatility) : _option(option), _underlying_price(initial_price), _risk_free_rate(interest_rate), _volatility(volatility), _nb_paths_generated(0), _current_estimate(0.0), estimates_mean(0.0), estimates_variance(0.0) {}
 
-// Méthode pour obtenir le nombre de chemins générés
+// Method for obtaining the number of paths generated
 int BlackScholesMCPricer::getNbPaths() const
 {
     return _nb_paths_generated;
 }
 
-// Implémentation de la méthode pour générer des chemins
+// Implementation of the method for generating paths
 void BlackScholesMCPricer::generate(int nb_paths)
 {
     if (nb_paths <= 0)
@@ -80,7 +80,7 @@ void BlackScholesMCPricer::generate(int nb_paths)
 
         }
 
-        double payoff = _option->payoffPath(spot_paths); // Calcul du payoff
+        double payoff = _option->payoffPath(spot_paths); // Calcul of the payoff
         payoffs += payoff;
         estimates_mean += payoff;
         estimates_variance += payoff * payoff;
@@ -88,7 +88,7 @@ void BlackScholesMCPricer::generate(int nb_paths)
         spot_paths.clear();
     }
 
-    // Mise à jour de l'estimation du prix
+    // Update price estimation
     new_price_estimate = exp(-_risk_free_rate * T) * (payoffs / nb_paths);
     _current_estimate = (_current_estimate * _nb_paths_generated + new_price_estimate * nb_paths) / (_nb_paths_generated + nb_paths);
     _nb_paths_generated += nb_paths;
@@ -96,7 +96,7 @@ void BlackScholesMCPricer::generate(int nb_paths)
 
 }
 
-// Opérateur () pour retourner l'estimation actuelle
+// Operator () to return the current estimate
 double BlackScholesMCPricer::operator()() const
 {
     if (_nb_paths_generated == 0)
@@ -106,7 +106,7 @@ double BlackScholesMCPricer::operator()() const
     return _current_estimate;
 }
 
-// Méthode pour calculer l'intervalle de confiance à 95 %
+// Method for calculating the 95% confidence interval
 std::vector<double> BlackScholesMCPricer::confidenceInterval() const
 {
     if (_nb_paths_generated == 0)
