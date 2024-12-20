@@ -4,7 +4,6 @@
 #include <stdexcept>
 #include <cmath>
 
-// CRRPricer: Implements the Cox-Ross-Rubinstein pricing model for options
 class CRRPricer
 {
 public:
