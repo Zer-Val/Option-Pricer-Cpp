@@ -9,7 +9,7 @@ double AmericanCallOption::payoff(double z) const
 	return (z >= getStrike()) ? (z - getStrike()) : 0.0;
 }
 
-//GetOptionType method for a(n) (American) Call option
+//GetOptionType method for an American Call option
 AmericanCallOption::optionType AmericanCallOption::GetOptionType() const
 {
 	return optionType::call;

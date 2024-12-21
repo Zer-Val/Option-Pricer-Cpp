@@ -20,7 +20,7 @@ private:
 
 template <typename T>
 void BinaryTree<T>::setDepth(int depth) {
-    _depth = depth; // Ajouter 1 pour que la profondeur de 3 signifie 4 étages
+    _depth = depth; // Add 1 so that the depth of 3 means 4 floors
     _tree.resize(_depth + 1);
     for (int i = 0; i <= _depth; ++i) {
         _tree[i].resize(i + 1);
@@ -58,32 +58,32 @@ void BinaryTree<T>::display() const {
             std::cout << std::endl;
         }
         for (int i = 0; i <= _depth; ++i) {
-            // Calculer les espaces avant le premier nombre
+            // Calculate spaces before the first number
             int leadingSpaces = 3 * (_depth - i);
 
-            // Imprimer les espaces avant le premier nombre
+            // Print spaces before the first number
             for (int space = 0; space < leadingSpaces; ++space) {
                 std::cout << " ";
             }
-            // Imprimer les valeurs pour le niveau actuel
+            // Print values for current level
             for (int j = 0; j <= i; ++j) {
-                std::cout << std::setw(2) << _tree[i][j]; // Imprimer chaque valeur avec une largeur fixe de 2 caractères
+                std::cout << std::setw(2) << _tree[i][j]; // Print each value with a fixed width of 2 characters
                 if (j < i) {
                     for (int space = 0; space < 3; ++space) {
-                        std::cout << " "; // Espaces entre les valeurs
+                        std::cout << " "; // Spaces between values
                     }
                     if (_tree[i][j] < 99 && std::floor(_tree[i][j]) == _tree[i][j]) {
-                        std::cout << " "; // Espaces supplémentaires pour les nombres à 3 chiffres
+                        std::cout << " "; // Extra spaces for 3-digit numbers
                     }
                 }
             }
             std::cout << std::endl;
 
-            // Imprimer les barres obliques pour chaque niveau, sauf le dernier
+            // Print slashes for each level except the last
             if (i < _depth) {
                 int slashLeadingSpaces = 3 * (_depth - i) - 1;
 
-                // Imprimer les espaces avant le premier /
+                // Print spaces before first /
                 for (int space = 0; space < slashLeadingSpaces; ++space) {
                     std::cout << " ";
                 }
@@ -91,12 +91,12 @@ void BinaryTree<T>::display() const {
                 for (int j = 0; j <= i; ++j) {
                     std::cout << "/";
                     for (int space = 0; space < 3; ++space) {
-                        std::cout << " "; // Espaces entre / et \ //
+                        std::cout << " "; // Spaces between / and \ //
                     }
                     std::cout << "\\";
                     if (j < i) {
                         for (int space = 0; space < 1; ++space) {
-                            std::cout << " "; // Espaces entre chaque paire de / et \ //
+                            std::cout << " "; // Spaces between each pair of / and \.
                         }
                     }
                 }
