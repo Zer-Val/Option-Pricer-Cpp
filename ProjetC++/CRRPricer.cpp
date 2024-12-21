@@ -152,7 +152,7 @@ double CRRPricer::binomialCoefficient(int n, int k) const
     {
         k = n - k;
     }
-
+    
     if (!(k == 0 || k == n))
     {
         for (int i = 1; i <= k; ++i)
