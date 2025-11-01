@@ -10,6 +10,6 @@ public:
 	//Payoff method for an Ameican Put option
 	double payoff(double z) const override;
 
-	//GetOptionType method for a Call option
+	//GetOptionType method for a Put option
 	optionType GetOptionType() const override;
 };

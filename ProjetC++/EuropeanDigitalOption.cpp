@@ -9,7 +9,7 @@ double EuropeanDigitalOption::getStrike() const
 	return _strike;
 }
 
-// Override of isAsianOption to return false for EVDO - (Compilation issue if not)
+// Override of isAsianOption to return false for european virtual digital option - (Compilation issue if not)
 bool EuropeanDigitalOption::isAsianOption() const
 {
 	return false;
