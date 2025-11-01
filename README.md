@@ -1,7 +1,7 @@
 # Projet C++
 
 This project is an academic project on the use of C++ in the field of Finance, specifically focusing on the pricing of Call and Put options. 
-
+aaaa
 This project aims to implement option pricing models, including Black-Scholes and Cox-Ross-Rubinstein, in C++ to price European and American options and determine early exercise policies. It involves validating pricing methods using closed-form solutions, Monte Carlo simulations, and a binary tree structure for modeling asset price evolution.
 
 This project is based on the following project assignement :
